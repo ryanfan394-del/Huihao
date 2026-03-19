@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Huihao Fan · 范惠浩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&family=Noto+Sans+SC:wght@300;400&family=Crimson+Pro:ital,wght@0,200;0,300;0,600;1,200;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <svg viewBox="0 0 120 120" class="seal-svg" id="seal-svg">
+        <circle cx="60" cy="60" r="54" fill="none" stroke="#c8864a" stroke-width="1" class="seal-ring"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="#c8864a" stroke-width="0.4" class="seal-ring2"/>
+        <text x="60" y="50" text-anchor="middle" font-family="Noto Serif SC" font-size="18" fill="#c8864a" class="seal-text">范</text>
+        <text x="60" y="74" text-anchor="middle" font-family="Noto Serif SC" font-size="18" fill="#c8864a" class="seal-text">惠浩</text>
+      </svg>
+      <p class="loader-sub">呼和浩特 · Hohhot · Inner Mongolia</p>
+      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-brand">
+      <span class="nb-zh">范惠浩</span>
+      <span class="nb-sep">·</span>
+      <span class="nb-en">Huihao Fan</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#origin">起源<span>Origin</span></a></li>
+      <li><a href="#courtyard">院落<span>Courtyard</span></a></li>
+      <li><a href="#seasons">四季<span>Seasons</span></a></li>
+      <li><a href="#journey">旅途<span>Journey</span></a></li>
+      <li><a href="#research">研究<span>Research</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-vignette"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span>呼和浩特 · 内蒙古 · Inner Mongolia</span>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="hero-name">
+        <span class="hn-zh">范惠浩</span>
+        <span class="hn-en">Huihao Fan</span>
+      </h1>
+      <p class="hero-tagline">
+        <em>From a courtyard in the farming plains of Hohhot</em><br>
+        <span class="ht-zh">从呼和浩特农耕平原上的一座院落</span><br>
+        to the frontiers of biostatistics
+      </p>
+      <div class="hero-cta">
+        <a href="#origin" class="hc-btn">探索 Explore</a>
+        <a href="https://independent.academia.edu/HuihaoFan" target="_blank" class="hc-ghost">学术档案 Academia ↗</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hs-line"></div>
+      <span>向下滚动</span>
+    </div>
+  </section>
+
+  <!-- ═══ ORIGIN ═══ -->
+  <section class="sect" id="origin">
+    <div class="bg-kanji" aria-hidden="true">呼</div>
+    <div class="wrap">
+      <div class="chap-mark">
+        <span class="cm-zh">一</span>
+        <span class="cm-bar"></span>
+        <span class="cm-en">Chapter One</span>
+      </div>
+      <div class="origin-split">
+        <div class="os-left reveal">
+          <h2>The Blue City<br><em>青城</em></h2>
+          <p>Hohhot — <span class="inline-zh">呼和浩特</span> — means <em>"blue city"</em> in Mongolian. Perched at the edge of the great grasslands where yellow loess farmland meets an infinite sky, it is a place of extremes: scorching summers and bone-white winters, ancient Silk Road echoes and quiet village mornings.</p>
+          <p class="zh-block">呼和浩特，蒙古语意为"青色的城"。坐落于大草原边缘，黄土农田与内蒙古辽阔天空交汇之处。这里气候极端：炎热的夏日与冰白的冬雪，古老的丝路回响与寂静的村间晨光。</p>
+          <div class="coords-row">
+            <span>40°49′N</span>
+            <span class="coord-dot">·</span>
+            <span>111°39′E</span>
+            <span class="coord-alt">海拔 1,040m</span>
+          </div>
+        </div>
+        <div class="os-right reveal">
+          <div class="map-frame">
+            <canvas id="map-canvas" width="380" height="380"></canvas>
+            <div class="map-label-hohhot">呼和浩特<br><small>Hohhot</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COURTYARD ═══ -->
+  <section class="sect sect-dark" id="courtyard">
+    <div class="wrap">
+      <div class="chap-mark light">
+        <span class="cm-zh">二</span>
+        <span class="cm-bar"></span>
+        <span class="cm-en">Chapter Two</span>
+      </div>
+      <h2 class="light-title">The Courtyard<br><em>院落</em></h2>
+      <p class="sect-intro light-p">点击各处，探索这座院落的每个角落 · <em>Click anywhere to explore</em></p>
+    </div>
+
+    <!-- INTERACTIVE COURTYARD SVG -->
+    <div class="cy-wrap" id="cy-wrap">
+      <svg viewBox="0 0 900 600" class="cy-svg" id="cy-svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="skyGrd" cx="50%" cy="0%" r="100%">
+            <stop offset="0%" stop-color="#1c1206"/>
+            <stop offset="100%" stop-color="#0a0804"/>
+          </radialGradient>
+          <radialGradient id="glowR" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c8864a" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#c8864a" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f0a040" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#f0a040" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="softglow">
+            <feGaussianBlur stdDeviation="4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Sky -->
+        <rect width="900" height="600" fill="url(#skyGrd)"/>
+
+        <!-- Stars scattered -->
+        <g id="cy-stars" fill="#f0d090" opacity="0.5"></g>
+
+        <!-- Moon -->
+        <circle cx="760" cy="80" r="35" fill="#f5e0a0" opacity="0.07"/>
+        <circle cx="760" cy="80" r="26" fill="#f0d080" opacity="0.1" filter="url(#softglow)"/>
+        <path d="M750,60 Q776,80 750,100 Q735,80 750,60Z" fill="#f0d080" opacity="0.12"/>
+
+        <!-- Distant hills -->
+        <path d="M0,310 Q80,270 180,290 Q280,250 380,275 Q480,240 560,265 Q660,230 760,255 Q830,245 900,260 L900,330 L0,330Z" fill="#120b04"/>
+
+        <!-- Ground courtyard floor -->
+        <rect x="180" y="330" width="540" height="220" fill="#1a1008"/>
+        <!-- Tile grid -->
+        <g stroke="rgba(200,150,80,0.05)" stroke-width="0.8">
+          <line x1="180" y1="370" x2="720" y2="370"/>
+          <line x1="180" y1="410" x2="720" y2="410"/>
+          <line x1="180" y1="450" x2="720" y2="450"/>
+          <line x1="180" y1="490" x2="720" y2="490"/>
+          <line x1="250" y1="330" x2="250" y2="550"/>
+          <line x1="320" y1="330" x2="320" y2="550"/>
+          <line x1="390" y1="330" x2="390" y2="550"/>
+          <line x1="460" y1="330" x2="460" y2="550"/>
+          <line x1="530" y1="330" x2="530" y2="550"/>
+          <line x1="600" y1="330" x2="600" y2="550"/>
+          <line x1="670" y1="330" x2="670" y2="550"/>
+        </g>
+
+        <!-- ═ LEFT WING ═ -->
+        <rect x="60" y="220" width="180" height="200" fill="#1e1208" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.3"/>
+        <path d="M36,220 Q150,178 244,220" fill="#140c04" stroke="#c8864a" stroke-width="1.2" stroke-opacity="0.6"/>
+        <!-- wing window -->
+        <rect x="90" y="252" width="46" height="58" fill="#c8864a" fill-opacity="0.06" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="113" y1="252" x2="113" y2="310" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <line x1="90" y1="281" x2="136" y2="281" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <!-- wing door -->
+        <rect x="170" y="310" width="34" height="80" fill="#c8864a" fill-opacity="0.08" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.3"/>
+        <!-- hotspot -->
+        <circle cx="140" cy="300" r="55" fill="transparent" class="hotspot" id="hs-left" data-spot="left" style="cursor:pointer"/>
+
+        <!-- ═ RIGHT WING ═ -->
+        <rect x="660" y="220" width="180" height="200" fill="#1e1208" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.3"/>
+        <path d="M656,220 Q750,178 864,220" fill="#140c04" stroke="#c8864a" stroke-width="1.2" stroke-opacity="0.6"/>
+        <rect x="724" y="252" width="46" height="58" fill="#c8864a" fill-opacity="0.06" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.3"/>
+        <line x1="747" y1="252" x2="747" y2="310" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <line x1="724" y1="281" x2="770" y2="281" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <rect x="656" y="310" width="34" height="80" fill="#c8864a" fill-opacity="0.08" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.3"/>
+        <circle cx="760" cy="300" r="55" fill="transparent" class="hotspot" id="hs-right" data-spot="right" style="cursor:pointer"/>
+
+        <!-- ═ MAIN HALL ═ -->
+        <rect x="240" y="150" width="420" height="220" fill="#241508" stroke="#c8864a" stroke-width="0.6" stroke-opacity="0.4"/>
+        <!-- Main roof -->
+        <path d="M204,150 Q450,100 696,150" fill="#100804" stroke="#c8864a" stroke-width="1.8" stroke-opacity="0.8"/>
+        <!-- Roof ridge -->
+        <circle cx="450" cy="101" r="7" fill="none" stroke="#c8864a" stroke-width="1" stroke-opacity="0.7"/>
+        <circle cx="450" cy="101" r="3" fill="#c8864a" opacity="0.5"/>
+        <!-- eaves decorative ticks -->
+        <g stroke="#c8864a" stroke-width="0.6" stroke-opacity="0.25">
+          <line x1="260" y1="150" x2="260" y2="162"/>
+          <line x1="300" y1="148" x2="300" y2="158"/>
+          <line x1="340" y1="145" x2="340" y2="155"/>
+          <line x1="380" y1="143" x2="380" y2="153"/>
+          <line x1="420" y1="141" x2="420" y2="151"/>
+          <line x1="460" y1="141" x2="460" y2="151"/>
+          <line x1="500" y1="141" x2="500" y2="151"/>
+          <line x1="540" y1="143" x2="540" y2="153"/>
+          <line x1="580" y1="145" x2="580" y2="155"/>
+          <line x1="620" y1="148" x2="620" y2="158"/>
+          <line x1="660" y1="150" x2="660" y2="162"/>
+        </g>
+        <!-- Windows left -->
+        <rect x="268" y="180" width="54" height="72" fill="#c8864a" fill-opacity="0.07" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.35"/>
+        <line x1="295" y1="180" x2="295" y2="252" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <line x1="268" y1="216" x2="322" y2="216" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <!-- Windows right -->
+        <rect x="578" y="180" width="54" height="72" fill="#c8864a" fill-opacity="0.07" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.35"/>
+        <line x1="605" y1="180" x2="605" y2="252" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <line x1="578" y1="216" x2="632" y2="216" stroke="#c8864a" stroke-width="0.4" stroke-opacity="0.4"/>
+        <!-- Main doors (double) -->
+        <rect x="396" y="260" width="54" height="100" fill="#2e1a0a" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.4"/>
+        <rect x="450" y="260" width="54" height="100" fill="#2e1a0a" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.4"/>
+        <rect x="396" y="260" width="108" height="8" fill="#c8864a" opacity="0.4"/>
+        <circle cx="449" cy="314" r="4" fill="#c8864a" opacity="0.7"/>
+        <circle cx="451" cy="314" r="4" fill="#c8864a" opacity="0.7"/>
+        <!-- Lanterns flanking door -->
+        <rect x="374" y="246" width="12" height="20" rx="6" fill="#f0a040" opacity="0.3" filter="url(#softglow)"/>
+        <circle cx="380" cy="242" r="14" fill="url(#lanternGlow)"/>
+        <rect x="514" y="246" width="12" height="20" rx="6" fill="#f0a040" opacity="0.3" filter="url(#softglow)"/>
+        <circle cx="520" cy="242" r="14" fill="url(#lanternGlow)"/>
+        <!-- main hall hotspot -->
+        <rect x="250" y="150" width="400" height="180" fill="transparent" class="hotspot" id="hs-main" data-spot="main" style="cursor:pointer"/>
+
+        <!-- ═ WELL ═ -->
+        <ellipse cx="310" cy="400" rx="26" ry="12" fill="#100804" stroke="#c8864a" stroke-width="0.8" stroke-opacity="0.5"/>
+        <rect x="284" y="376" width="52" height="26" fill="#1a1008" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.4"/>
+        <line x1="310" y1="362" x2="310" y2="376" stroke="#c8864a" stroke-width="0.8" stroke-opacity="0.4"/>
+        <ellipse cx="310" cy="362" rx="18" ry="5" fill="none" stroke="#c8864a" stroke-width="0.6" stroke-opacity="0.3"/>
+        <circle cx="310" cy="400" r="36" fill="transparent" class="hotspot" id="hs-well" data-spot="well" style="cursor:pointer"/>
+
+        <!-- ═ TREE ═ -->
+        <rect x="572" y="365" width="10" height="70" fill="#2e1a0a"/>
+        <ellipse cx="577" cy="352" rx="32" ry="24" fill="#1a2e1a" opacity="0.8"/>
+        <ellipse cx="577" cy="344" rx="22" ry="16" fill="#243824" opacity="0.7"/>
+        <ellipse cx="583" cy="338" rx="14" ry="10" fill="#1e3020" opacity="0.6"/>
+        <circle cx="577" cy="360" r="42" fill="transparent" class="hotspot" id="hs-tree" data-spot="tree" style="cursor:pointer"/>
+
+        <!-- ═ GATE ═ -->
+        <rect x="376" y="464" width="148" height="14" fill="#c8864a" opacity="0.45"/>
+        <rect x="376" y="478" width="68" height="72" fill="#1e1208" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.3"/>
+        <rect x="456" y="478" width="68" height="72" fill="#1e1208" stroke="#c8864a" stroke-width="0.5" stroke-opacity="0.3"/>
+        <rect x="366" y="456" width="12" height="94" fill="#2e1a0a"/>
+        <rect x="522" y="456" width="12" height="94" fill="#2e1a0a"/>
+        <rect x="372" y="444" width="8" height="16" rx="4" fill="#f0a040" opacity="0.35" filter="url(#softglow)"/>
+        <rect x="520" y="444" width="8" height="16" rx="4" fill="#f0a040" opacity="0.35" filter="url(#softglow)"/>
+        <circle cx="450" cy="478" r="40" fill="transparent" class="hotspot" id="hs-gate" data-spot="gate" style="cursor:pointer"/>
+
+        <!-- Hotspot pulse rings (animated via CSS) -->
+        <circle cx="140" cy="300" r="8" fill="#c8864a" opacity="0.6" class="hs-pulse"/>
+        <circle cx="760" cy="300" r="8" fill="#c8864a" opacity="0.6" class="hs-pulse"/>
+        <circle cx="450" cy="220" r="8" fill="#c8864a" opacity="0.6" class="hs-pulse"/>
+        <circle cx="310" cy="400" r="8" fill="#c8864a" opacity="0.6" class="hs-pulse"/>
+        <circle cx="577" cy="360" r="8" fill="#c8864a" opacity="0.6" class="hs-pulse"/>
+        <circle cx="450" cy="478" r="8" fill="#c8864a" opacity="0.6" class="hs-pulse"/>
+      </svg>
+
+      <!-- Story popup -->
+      <div class="cy-popup" id="cy-popup">
+        <button class="cy-popup-close" id="cy-close">✕</button>
+        <div id="cy-popup-body"></div>
+      </div>
+    </div>
+
+    <div class="wrap cy-bottom">
+      <p class="light-p">这不只是一栋房子——它是一座小广场，一个被四面墙围住的世界。正房朝南，捕捉每一缕冬日阳光。厢房里住着亲戚，储着谷物，积淀着几代人的记忆。</p>
+      <p class="light-p-en"><em>This was more than a house — it was a small plaza, an entire world within four walls. The main hall faced south, as tradition demanded, to capture every hour of winter sun. The wings housed family, stored grain, and held the memory of generations.</em></p>
+    </div>
+  </section>
+
+  <!-- ═══ SEASONS ═══ -->
+  <section class="sect" id="seasons">
+    <div class="bg-kanji" aria-hidden="true">季</div>
+    <div class="wrap">
+      <div class="chap-mark">
+        <span class="cm-zh">三</span>
+        <span class="cm-bar"></span>
+        <span class="cm-en">Chapter Three</span>
+      </div>
+      <h2>Four Seasons of the Plains<br><em>平原四季</em></h2>
+    </div>
+
+    <div class="seasons-ui">
+      <div class="s-tabs">
+        <button class="s-tab active" data-s="spring">春<span>Spring</span></button>
+        <button class="s-tab" data-s="summer">夏<span>Summer</span></button>
+        <button class="s-tab" data-s="autumn">秋<span>Autumn</span></button>
+        <button class="s-tab" data-s="winter">冬<span>Winter</span></button>
+      </div>
+      <div class="s-stage">
+        <canvas id="s-canvas"></canvas>
+        <div class="s-overlay" id="s-text"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JOURNEY ═══ -->
+  <section class="sect sect-dark" id="journey">
+    <div class="wrap">
+      <div class="chap-mark light">
+        <span class="cm-zh">四</span>
+        <span class="cm-bar"></span>
+        <span class="cm-en">Chapter Four</span>
+      </div>
+      <h2 class="light-title">The Long Road Out<br><em>远行之路</em></h2>
+    </div>
+
+    <div class="jt-wrap" id="jt-wrap">
+      <div class="jt-spine"></div>
+
+      <div class="jt-node" data-i="0">
+        <div class="jt-marker"><span>一</span></div>
+        <div class="jt-card">
+          <span class="jt-tag">童年 · Childhood</span>
+          <h3>Born in the farming district of Hohhot</h3>
+          <p>A courtyard house. Rows of crops stretching to the horizon. The smell of earth after rain on the Inner Mongolian plains.</p>
+          <p class="zh-block">一座院落，田垄延伸至天际。内蒙古平原雨后泥土的气息。一切从这里开始。</p>
+        </div>
+      </div>
+
+      <div class="jt-node jt-right" data-i="1">
+        <div class="jt-marker"><span>二</span></div>
+        <div class="jt-card">
+          <span class="jt-tag">求学 · Education</span>
+          <h3>Leaving the courtyard for the classroom</h3>
+          <p>From rural Hohhot to university — the leap from a life measured in harvests to one measured in equations and evidence.</p>
+          <p class="zh-block">从农村院落到大学校园——从以丰收丈量生命，到以公式与证据重新丈量世界。</p>
+        </div>
+      </div>
+
+      <div class="jt-node" data-i="2">
+        <div class="jt-marker"><span>三</span></div>
+        <div class="jt-card">
+          <span class="jt-tag">医疗研究 · Medicaid</span>
+          <h3>44,511 patients. Zero forgotten.</h3>
+          <p>Analyzing drug-drug interactions in Medicaid patients — tens of thousands of lives behind every data point.</p>
+          <p class="zh-block">分析医疗补助患者中的药物相互作用——每一个数据点背后，都是真实的生命。</p>
+        </div>
+      </div>
+
+      <div class="jt-node jt-right" data-i="3">
+        <div class="jt-marker"><span>四</span></div>
+        <div class="jt-card">
+          <span class="jt-tag">动物健康 · Veterinary</span>
+          <h3>From human medicine to animal health</h3>
+          <p>Bringing statistical rigor to veterinary science at Zoetis — heartworm resistance, anti-coccidial trials, feline diagnostics.</p>
+          <p class="zh-block">将统计严谨性带入兽医科学——心丝虫耐药性、抗球虫药物试验、猫科诊断。</p>
+        </div>
+      </div>
+
+      <div class="jt-node" data-i="4">
+        <div class="jt-marker"><span>五</span></div>
+        <div class="jt-card">
+          <span class="jt-tag">独立研究 · Independent</span>
+          <h3>The researcher stands alone</h3>
+          <p>From a courtyard that housed a family to a mind that houses multitudes. Independent researcher — bridging disciplines across pharmacology and statistical innovation.</p>
+          <p class="zh-block">从庇护一家人的院落，到容纳广阔思想的心智。独立研究者，跨越药理学与统计创新之间的边界。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESEARCH ═══ -->
+  <section class="sect" id="research">
+    <div class="bg-kanji" aria-hidden="true">研</div>
+    <div class="wrap">
+      <div class="chap-mark">
+        <span class="cm-zh">五</span>
+        <span class="cm-bar"></span>
+        <span class="cm-en">Chapter Five</span>
+      </div>
+      <h2>The Work<br><em>著作</em></h2>
+    </div>
+
+    <div class="pub-grid wrap">
+      <div class="pb tall reveal">
+        <span class="pb-tag">Veterinary Science</span>
+        <h3>GLMM for anti-coccidial lesion scores in battery cage studies</h3>
+        <p>Proposed GLMM with cumulative logit link over conventional LMM — establishing a 10-fold odds criterion for clinical relevancy.</p>
+        <div class="pb-foot"><span>Veterinary Parasitology · 2018</span><a href="https://www.academia.edu/88432071" target="_blank">阅读 ↗</a></div>
+      </div>
+      <div class="pb reveal">
+        <span class="pb-tag">Parasitology</span>
+        <h3>ProHeart® vs. resistant <em>D. immitis</em></h3>
+        <p>99.3% microfilarial reduction at Day 168 in ML-resistant heartworm from the Mississippi Delta.</p>
+        <div class="pb-foot"><span>Parasites & Vectors · 2017</span><a href="https://www.academia.edu/88432038" target="_blank">Read ↗</a></div>
+      </div>
+      <div class="pb reveal">
+        <span class="pb-tag">Feline Diagnostics</span>
+        <h3>FeLV rapid test comparison</h3>
+        <p>Equivalent 100% specificity across WITNESS and SNAP platforms in 139 cats.</p>
+        <div class="pb-foot"><span>JFMS Open Reports · 2018</span><a href="https://www.academia.edu/83738812" target="_blank">Read ↗</a></div>
+      </div>
+      <div class="pb tall reveal">
+        <span class="pb-tag">Pharmacoepidemiology</span>
+        <h3>DDIs in 44,511 Medicaid patients on antipsychotics</h3>
+        <p>CYP450-mediated drug interaction analysis across schizophrenia and bipolar populations. Economic and clinical consequences quantified.</p>
+        <div class="pb-foot"><span>Psychiatric Services · 2012</span><a href="https://www.academia.edu/78519599" target="_blank">阅读 ↗</a></div>
+      </div>
+      <div class="pb reveal">
+        <span class="pb-tag">Health Economics</span>
+        <h3>PCA of Medicaid drug expenditure across 64 therapeutic classes</h3>
+        <p>Three components explain 90%+ of variation in 56 quarters of national CMS data.</p>
+        <div class="pb-foot"><span>J. Medical Economics · 2008</span></div>
+      </div>
+      <div class="pb reveal">
+        <span class="pb-tag">Cardiotoxicology</span>
+        <h3>QTc detection power in NHP & dog</h3>
+        <p>Simulation study informing cardiovascular safety pharmacology across species models.</p>
+        <div class="pb-foot"><span>J. Pharm. Tox. Methods · 2011</span></div>
+      </div>
+    </div>
+
+    <div class="wrap acad-cta">
+      <a href="https://independent.academia.edu/HuihaoFan" target="_blank" class="acad-btn">
+        <span>查看全部著作</span>
+        <span class="ab-sub">View all publications on Academia.edu</span>
+        <span class="ab-arr">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <svg viewBox="0 0 90 90" width="72" height="72" class="ft-seal">
+      <circle cx="45" cy="45" r="40" fill="none" stroke="#c8864a" stroke-width="0.8" opacity="0.4"/>
+      <text x="45" y="40" text-anchor="middle" font-family="Noto Serif SC" font-size="13" fill="#c8864a" opacity="0.6">范惠浩</text>
+      <text x="45" y="57" text-anchor="middle" font-family="Crimson Pro" font-size="9" fill="#c8864a" opacity="0.4" font-style="italic">Huihao Fan</text>
+    </svg>
+    <p class="ft-quote">"从院落到世界"<br><em>From the courtyard to the world.</em></p>
+    <p class="ft-loc">呼和浩特 · 内蒙古 · Hohhot, Inner Mongolia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
