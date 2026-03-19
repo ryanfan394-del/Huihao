@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>范辉昊 — Huihao Fan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-char" id="loaderChar">范</div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <p class="loader-txt">Loading memories from Hohhot...</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-brand">
+      <span class="nb-cn">范辉昊</span>
+      <span class="nb-dot">·</span>
+      <span class="nb-en">Huihao Fan</span>
+    </div>
+    <ul class="nav-ul">
+      <li><a href="#origins"><span class="nl-cn">起源</span><span class="nl-en">Origins</span></a></li>
+      <li><a href="#plaza"><span class="nl-cn">广场</span><span class="nl-en">Plaza</span></a></li>
+      <li><a href="#journey"><span class="nl-cn">旅程</span><span class="nl-en">Journey</span></a></li>
+      <li><a href="#research"><span class="nl-cn">研究</span><span class="nl-en">Research</span></a></li>
+      <li><a href="#works"><span class="nl-cn">作品</span><span class="nl-en">Works</span></a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#origins">起源 <em>Origins</em></a>
+    <a href="#plaza">广场 <em>Plaza</em></a>
+    <a href="#journey">旅程 <em>Journey</em></a>
+    <a href="#research">研究 <em>Research</em></a>
+    <a href="#works">作品 <em>Works</em></a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-bg-chars">
+      <span class="hbc" style="top:10%;left:5%;--sz:8rem;--op:0.04;--dur:12s">静</span>
+      <span class="hbc" style="top:70%;left:3%;--sz:6rem;--op:0.03;--dur:18s">远</span>
+      <span class="hbc" style="top:20%;right:4%;--sz:10rem;--op:0.05;--dur:15s">学</span>
+      <span class="hbc" style="top:60%;right:6%;--sz:7rem;--op:0.03;--dur:20s">思</span>
+      <span class="hbc" style="top:45%;left:45%;--sz:18rem;--op:0.02;--dur:25s">归</span>
+    </div>
+    <div class="hero-wrap">
+      <p class="hero-place fade-up" style="--d:0.2s">呼和浩特 · Hohhot, Inner Mongolia</p>
+      <h1 class="hero-title fade-up" style="--d:0.5s">
+        <span class="ht-cn">范辉昊</span>
+        <span class="ht-line"></span>
+        <span class="ht-en">Huihao Fan</span>
+      </h1>
+      <p class="hero-sub fade-up" style="--d:0.8s">Biostatistician. Independent Researcher.<br/>A childhood spent in a rural plaza — a career spent finding order in data that resists it.</p>
+      <div class="hero-actions fade-up" style="--d:1.1s">
+        <a href="#origins" class="ha-primary">Begin the Story</a>
+        <a href="#works" class="ha-ghost">View Publications</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="hsi-line"></div>
+      <span>向下</span>
+    </div>
+    <!-- LANTERNS -->
+    <div class="lanterns" id="lanterns"></div>
+  </section>
+
+  <!-- ORIGINS -->
+  <section class="origins" id="origins">
+    <div class="origins-atmosphere">
+      <div class="oa-grass g1"></div>
+      <div class="oa-grass g2"></div>
+      <div class="oa-grass g3"></div>
+    </div>
+    <div class="container">
+      <div class="origins-grid">
+        <div class="og-text reveal">
+          <span class="stag">起源 · Origins</span>
+          <h2>Where grasslands<br/><em>meet the sky</em></h2>
+          <p class="og-lead">呼和浩特. The Blue City. Capital of Inner Mongolia — where the Mongolian steppe stretches to every horizon and winters arrive with a sharpness that reminds you exactly where you are.</p>
+          <p>Huihao Fan didn't grow up in the city's heart. He grew up on its rural edge — in a 广场, a small plaza, a cluster of low-rise buildings surrounded on all sides by farmland. Neighbors knew each other by name. Seasons were marked not by calendar but by the color of the fields.</p>
+          <p>It was a childhood of open skies, communal courtyards, and the patience that only comes from living somewhere nothing moves fast. A patience that would one day define a meticulous scientific career.</p>
+        </div>
+        <div class="og-map reveal">
+          <div class="map-plate">
+            <div class="mp-label-top">内蒙古 · Inner Mongolia</div>
+            <div class="mp-pulse-wrap">
+              <div class="mp-rings">
+                <div class="mpr r1"></div>
+                <div class="mpr r2"></div>
+                <div class="mpr r3"></div>
+              </div>
+              <div class="mp-core"></div>
+            </div>
+            <div class="mp-label-bot">呼和浩特 · Hohhot</div>
+            <div class="mp-coords">40.8424° N, 111.7495° E</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PLAZA — INTERACTIVE SCENE -->
+  <section class="plaza" id="plaza">
+    <div class="container">
+      <span class="stag center">广场 · The Plaza</span>
+      <h2 class="ch2">A childhood drawn in dust and light</h2>
+      <p class="csub">Hover the glowing spots to unlock memories from the plaza.</p>
+    </div>
+
+    <div class="scene-wrap" id="sceneWrap">
+      <!-- SKY -->
+      <div class="scene-sky" id="sceneSky">
+        <div class="sky-sun" id="skySun"></div>
+        <div class="sky-moon" id="skyMoon"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="stars" id="stars"></div>
+      </div>
+
+      <!-- MOUNTAINS / HORIZON -->
+      <div class="scene-horizon">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,80 Q150,20 300,70 Q450,110 600,40 Q750,0 900,60 Q1050,100 1200,50 L1200,120 L0,120 Z" fill="var(--horizon-fill)"/>
+        </svg>
+      </div>
+
+      <!-- BUILDINGS -->
+      <div class="scene-buildings">
+        <div class="bld bld1"><div class="bld-face"><div class="bld-win"></div><div class="bld-win"></div></div></div>
+        <div class="bld bld2">
+          <div class="bld-face">
+            <div class="bld-win lit"></div><div class="bld-win"></div>
+            <div class="bld-win"></div><div class="bld-win lit"></div>
+          </div>
+          <div class="bld-door"></div>
+        </div>
+        <div class="bld bld3"><div class="bld-face"><div class="bld-win lit"></div><div class="bld-win"></div><div class="bld-win lit"></div></div></div>
+        <div class="bld bld4"><div class="bld-face"><div class="bld-win"></div><div class="bld-win lit"></div></div></div>
+        <div class="bld bld5"><div class="bld-face"><div class="bld-win"></div><div class="bld-win"></div><div class="bld-win lit"></div><div class="bld-win"></div></div></div>
+      </div>
+
+      <!-- GROUND -->
+      <div class="scene-ground">
+        <div class="ground-plaza"></div>
+        <div class="ground-farm"></div>
+      </div>
+
+      <!-- MEMORY HOTSPOTS -->
+      <div class="hotspots">
+
+        <div class="hs" style="left:12%;bottom:28%" data-index="0">
+          <div class="hs-glow"></div>
+          <div class="hs-core"></div>
+          <div class="hs-card hsc-right">
+            <span class="hsc-cn">冬日</span>
+            <h4>Winter Mornings</h4>
+            <p>The courtyard froze overnight. Children slid across it in cloth shoes before school, breath rising in grey clouds. Coal smoke and steamed buns filled the cold air. Every winter morning felt the same — and that sameness was its own kind of warmth.</p>
+          </div>
+        </div>
+
+        <div class="hs" style="left:33%;bottom:32%" data-index="1">
+          <div class="hs-glow"></div>
+          <div class="hs-core"></div>
+          <div class="hs-card hsc-right">
+            <span class="hsc-cn">麦田</span>
+            <h4>The Wheat Fields</h4>
+            <p>Beyond the last building, the wheat began. In summer it turned gold — rows stretching to the horizon, moving like slow water in the wind. Years later, facing enormous datasets, Huihao would feel the same thing: the pleasure of finding pattern in something vast.</p>
+          </div>
+        </div>
+
+        <div class="hs" style="left:55%;bottom:30%" data-index="2">
+          <div class="hs-glow"></div>
+          <div class="hs-core"></div>
+          <div class="hs-card hsc-left">
+            <span class="hsc-cn">夜空</span>
+            <h4>Nights Without Light Pollution</h4>
+            <p>Far from city lights, the night sky over the rural plaza was enormous. The Milky Way stretched overhead on clear nights. Summer evenings were spent lying in the courtyard, counting stars — the first encounter with something beautiful, infinite, and impossible to fully enumerate.</p>
+          </div>
+        </div>
+
+        <div class="hs" style="left:78%;bottom:26%" data-index="3">
+          <div class="hs-glow"></div>
+          <div class="hs-core"></div>
+          <div class="hs-card hsc-left">
+            <span class="hsc-cn">集市</span>
+            <h4>The Weekly Market</h4>
+            <p>Once a week, vendors from nearby villages gathered near the plaza. Vegetables, fabric, dried goods, noise, color. Against the usual quiet, it felt like the whole world had arrived. It was the village's heartbeat — and it taught, without words, that data always has a story behind it.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TIME CONTROLS -->
+      <div class="time-controls" id="timeControls">
+        <button class="tc-btn active" data-t="day">☀ Day</button>
+        <button class="tc-btn" data-t="dusk">🌅 Dusk</button>
+        <button class="tc-btn" data-t="night">🌙 Night</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY TIMELINE -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <span class="stag">旅程 · Journey</span>
+      <h2>From the plaza,<br/><em>to the world</em></h2>
+      <p class="jsub">A life measured not in miles, but in questions carefully asked.</p>
+    </div>
+
+    <div class="tl-container">
+      <div class="tl-spine"></div>
+
+      <div class="tl-entry tl-l reveal-tl">
+        <div class="tl-node"><span>早</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">童年</div>
+          <h3>Early Life — Hohhot</h3>
+          <p>Born on the rural outskirts of Hohhot. A childhood in the plaza — a small compound of buildings ringed by farmland. The grasslands of Inner Mongolia were never more than a walk away. Patience, quiet, and observation were learned not in a classroom but in open space.</p>
+          <span class="tb-tag">呼和浩特 · Hohhot</span>
+        </div>
+      </div>
+
+      <div class="tl-entry tl-r reveal-tl">
+        <div class="tl-node"><span>学</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">求学</div>
+          <h3>Education — Leaving the Plaza</h3>
+          <p>The journey outward began with university. Biostatistics became the discipline — the branch of mathematics that sits at the edge of biology and uncertainty, demanding the same careful observation that a childhood in the plaza had instilled.</p>
+          <span class="tb-tag">统计学 · Biostatistics</span>
+        </div>
+      </div>
+
+      <div class="tl-entry tl-l reveal-tl">
+        <div class="tl-node"><span>08</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">发表</div>
+          <h3>2008 — Prolific Entry</h3>
+          <p>Three major publications in a single year: drug expenditure PCA in Medicaid, antipsychotic DDI economics in Value in Health, and Libby vermiculite radiographic research in the American Journal of Respiratory and Critical Care Medicine.</p>
+          <span class="tb-tag">Value in Health · AJRCCM</span>
+        </div>
+      </div>
+
+      <div class="tl-entry tl-r reveal-tl">
+        <div class="tl-node"><span>11</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">心脏</div>
+          <h3>2011 — Cardiovascular Safety</h3>
+          <p>Two papers in the Journal of Pharmacological and Toxicological Methods: simulation-based QTc power analysis and sample size adequacy in cardiovascular data. Work that influences how drug developers design safety studies.</p>
+          <span class="tb-tag">J. Pharmacological Methods</span>
+        </div>
+      </div>
+
+      <div class="tl-entry tl-l reveal-tl">
+        <div class="tl-node"><span>12</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">精神</div>
+          <h3>2012 — Psychiatric Services</h3>
+          <p>A major paper on dangerous DDI exposure in antipsychotic patients — 44,511 Medicaid patients, CYP450 isoenzymes, real clinical risk. Published in Psychiatric Services. The kind of work that quietly protects vulnerable patients.</p>
+          <span class="tb-tag">Psychiatric Services</span>
+        </div>
+      </div>
+
+      <div class="tl-entry tl-r reveal-tl">
+        <div class="tl-node"><span>17</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">兽医</div>
+          <h3>2017 — Veterinary Turn</h3>
+          <p>ProHeart® heartworm resistance study in Parasites & Vectors. 99.3% microfilarial reduction at Day 168. The farm boy from Hohhot, now making sense of resistant parasites from the Mississippi Delta — the world had grown wide.</p>
+          <span class="tb-tag">Parasites & Vectors · Zoetis</span>
+        </div>
+      </div>
+
+      <div class="tl-entry tl-l reveal-tl">
+        <div class="tl-node"><span>今</span></div>
+        <div class="tl-box">
+          <div class="tb-accent">现在</div>
+          <h3>Present — Independent Researcher</h3>
+          <p>Publishing across pharmacoepidemiology, veterinary science, and statistical methodology as an independent researcher. The plaza is long gone — replaced by newer buildings. But the habit of watching carefully, of counting what others don't notice, remains.</p>
+          <span class="tb-tag">Independent · Global</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="research-s" id="research">
+    <div class="container">
+      <span class="stag center light-tag">研究 · Research</span>
+      <h2 class="ch2 light-h">The disciplines<br/><em>of a careful mind</em></h2>
+    </div>
+    <div class="rg-grid">
+
+      <div class="rg-item reveal-rg" style="--rd:0s">
+        <div class="rgi-bg-char">药</div>
+        <span class="rgi-num">01</span>
+        <h3>Pharmacoepidemiology</h3>
+        <p>Large-scale Medicaid claims analysis. Drug-drug interaction risk among patients on antipsychotics. CYP450 isoenzyme pathways. 44,000+ patient cohorts. Real clinical stakes, real lives behind the numbers.</p>
+        <div class="rgi-pills"><span>CYP450</span><span>DDI</span><span>Medicaid</span><span>Antipsychotics</span></div>
+      </div>
+
+      <div class="rg-item reveal-rg" style="--rd:0.15s">
+        <div class="rgi-bg-char">兽</div>
+        <span class="rgi-num">02</span>
+        <h3>Veterinary Statistics</h3>
+        <p>GLMM methodology applied to anti-coccidial battery cage studies and heartworm microfilarial trials. Bridging rigorous biostatistics with animal health — from chicken intestinal lesions to resistant heartworms.</p>
+        <div class="rgi-pills"><span>GLMM</span><span>Parasitology</span><span>Ordinal</span><span>Zoetis</span></div>
+      </div>
+
+      <div class="rg-item reveal-rg" style="--rd:0.3s">
+        <div class="rgi-bg-char">心</div>
+        <span class="rgi-num">03</span>
+        <h3>Cardiovascular Safety</h3>
+        <p>Simulation-based power analysis for QTc interval detection in NHP and dog models. Sample size guidance for safety pharmacology. Work that shields future patients before drugs reach them.</p>
+        <div class="rgi-pills"><span>QT Interval</span><span>Simulation</span><span>NHP</span><span>Safety</span></div>
+      </div>
+
+      <div class="rg-item reveal-rg" style="--rd:0.45s">
+        <div class="rgi-bg-char">数</div>
+        <span class="rgi-num">04</span>
+        <h3>Statistical Methods</h3>
+        <p>Zero-inflated count models (ZIP, ZINB, ZIGP), PCA on 56-quarter datasets, cumulative logit mixed models for ordinal outcomes. The craft behind the science — methodology that makes other work possible.</p>
+        <div class="rgi-pills"><span>ZIP/ZINB</span><span>PCA</span><span>GLMM</span><span>Simulation</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="works-s" id="works">
+    <div class="container">
+      <span class="stag">作品 · Works</span>
+      <h2>Selected Publications</h2>
+      <div class="pub-filters">
+        <button class="pf active" data-f="all">全部 All</button>
+        <button class="pf" data-f="pharma">药学 Pharma</button>
+        <button class="pf" data-f="vet">兽医 Vet</button>
+        <button class="pf" data-f="stats">统计 Stats</button>
+      </div>
+      <div class="pub-grid" id="pubGrid">
+
+        <div class="pgi" data-c="vet">
+          <div class="pgi-year">2018</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">鸡肠</span>
+            <h4>Statistical analyses of chicken intestinal lesion scores in battery cage anti-coccidial studies</h4>
+            <p class="pgi-j">Veterinary Parasitology</p>
+            <p class="pgi-abs">GLMM with cumulative logit link proposed as superior to LMM. Clinical relevancy criterion: ≥10-fold odds increase in low lesion scores.</p>
+            <a href="https://www.academia.edu/88432071" target="_blank" class="pgi-link">阅读 · Read ↗</a>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="vet">
+          <div class="pgi-year">2018</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">猫病</span>
+            <h4>Diagnostic performance of two rapid tests for feline leukemia virus antigen detection</h4>
+            <p class="pgi-j">J. Feline Medicine and Surgery Open Reports</p>
+            <p class="pgi-abs">Equivalent sensitivity (100%) and specificity (97.8%) across WITNESS and SNAP platforms. 139 cats tested.</p>
+            <a href="https://www.academia.edu/83738812" target="_blank" class="pgi-link">阅读 · Read ↗</a>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="vet">
+          <div class="pgi-year">2017</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">心丝虫</span>
+            <h4>Microfilarial reduction following ProHeart® 6 and SR-12 in ML-resistant <em>D. immitis</em></h4>
+            <p class="pgi-j">Parasites & Vectors</p>
+            <p class="pgi-abs">99.3% microfilarial reduction at Day 168 in dogs with the ZoeMo-2012 resistant isolate.</p>
+            <a href="https://www.academia.edu/88432038" target="_blank" class="pgi-link">阅读 · Read ↗</a>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="pharma">
+          <div class="pgi-year">2012</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">药物</span>
+            <h4>Exposure to Potentially Dangerous Drug-Drug Interactions Involving Antipsychotics</h4>
+            <p class="pgi-j">Psychiatric Services</p>
+            <p class="pgi-abs">44,511 Medicaid patients. CYP450-mediated DDI pairs. Clinically significant exposure risk analysis at scale.</p>
+            <a href="https://www.academia.edu/78519599" target="_blank" class="pgi-link">阅读 · Read ↗</a>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="stats">
+          <div class="pgi-year">2011</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">心脏</span>
+            <h4>Cardiovascular data analysis — How much data is enough?</h4>
+            <p class="pgi-j">J. Pharmacological and Toxicological Methods</p>
+            <p class="pgi-abs">Sample size adequacy framework for cardiovascular safety studies in drug development.</p>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="stats">
+          <div class="pgi-year">2011</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">模拟</span>
+            <h4>Statistical power for detecting QTc changes — NHP and dog simulation study</h4>
+            <p class="pgi-j">J. Pharmacological and Toxicological Methods</p>
+            <p class="pgi-abs">Power curves across species and study designs for QT interval detection in safety pharmacology.</p>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="pharma">
+          <div class="pgi-year">2008</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">医疗</span>
+            <h4>Principal components analysis of drug expenditure and utilisation trends in US Medicaid</h4>
+            <p class="pgi-j">Journal of Medical Economics</p>
+            <p class="pgi-abs">3 PCA components explain 90%+ of variation across 64 therapeutic classes over 56 quarters of national claims data.</p>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="pharma">
+          <div class="pgi-year">2008</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">经济</span>
+            <h4>Economic and Clinical Consequences of Antipsychotic DDIs in Schizophrenia</h4>
+            <p class="pgi-j">Value in Health</p>
+            <p class="pgi-abs">Downstream cost and clinical burden of antipsychotic DDIs across a large schizophrenia cohort.</p>
+            <a href="https://www.academia.edu/78519598" target="_blank" class="pgi-link">阅读 · Read ↗</a>
+          </div>
+        </div>
+
+        <div class="pgi" data-c="stats">
+          <div class="pgi-year">—</div>
+          <div class="pgi-body">
+            <span class="pgi-cn">零膨</span>
+            <h4>Test of Treatment Effect with Zero-Inflated Over-Dispersed Count Data</h4>
+            <p class="pgi-j">Statistical Methods</p>
+            <p class="pgi-abs">ZIP, ZINB, and ZIGP models compared via simulation — power and Type I error under varying over-dispersion conditions.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing-char-bg">归</div>
+    <blockquote>
+      <p>"The plaza is gone now, replaced by newer buildings.<br/>But the habit of watching carefully — of counting what others don't notice — that never left."</p>
+      <cite>— Huihao Fan · 范辉昊 · Hohhot</cite>
+    </blockquote>
+    <a href="https://independent.academia.edu/HuihaoFan" target="_blank" class="closing-cta">Visit Academia.edu ↗</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="fi-l"><span class="fi-cn">范辉昊</span><span class="fi-en">Huihao Fan</span></div>
+      <div class="fi-c">呼和浩特 → The World</div>
+      <div class="fi-r">Biostatistician · Independent Researcher</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
